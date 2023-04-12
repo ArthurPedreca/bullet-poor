@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bullet-Poor</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js" defer></script>
+</head>
+
+<body class="bg-dark">
+    <div class="boneco">
+        <img src="cabeca.png" alt="" class="cabeca">
+        <img src="corpo.png" alt="" class="corpo">
+    </div>
+
+    <script>
+        var corpo = document.querySelector('.corpo');
+        var cabeca = document.querySelector('.cabeca');
+        var boneco = document.querySelector('.boneco');
+
+        cabeca.addEventListener('click', function () {
+            const dano200 = document.createElement('span');
+            dano200.classList.add('dano200');
+            dano200.innerText = '200';
+            boneco.appendChild(dano200);
+
+            cabeca.style.display = "none";
+            corpo.style.display = "none";
+
+        });
+
+        corpo.addEventListener('click', function () {
+            const dano50 = document.createElement('span');
+            dano50.classList.add('dano50');
+            dano50.innerHTML = "50"
+            boneco.appendChild(dano50);
+
+
+            cabeca.style.display = "none"
+            corpo.style.display = "none"
+        })
+    </script>
+
+</body>
+
+</html>
