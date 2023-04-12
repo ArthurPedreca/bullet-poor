@@ -1,0 +1,120 @@
+body {
+    background-color: darkgrey;
+}
+
+.cabeca {
+    width: 100px;
+}
+
+.corpo {
+    width: 100px;
+}
+
+.boneco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    align-items: center;
+    animation: mover 2s linear infinite;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.morrer {
+    animation: morrer 1s forwards;
+}
+
+@keyframes morrer {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes mover {
+    0% {
+        transform: translate(0%, -50%);
+    }
+
+    50% {
+        transform: translate(300%, -50%);
+    }
+
+    100% {
+        transform: translate(0%, -50%);
+    }
+
+
+}
+
+.dano200 {
+    position: absolute;
+    top: -20px;
+    left: 160px;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(210, 23, 23);
+    opacity: 1;
+    animation: dano200 1s ease-in-out forwards;
+    z-index: 999;
+    transition: opacity 1s ease-in-out;
+}
+
+@keyframes dano200 {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
+}
+
+@keyframes dano50 {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
+}
+
+
+.dano50 {
+    position: absolute;
+    top: -20px;
+    left: 160px;
+    transform: translate(-50%, -50%);
+    font-size: 1.60rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(54, 54, 54);
+    opacity: 1;
+    animation: dano50 1s ease-in-out forwards;
+    z-index: 999;
+    transition: opacity 1s ease-in-out;
+}
